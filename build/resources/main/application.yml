@@ -1,0 +1,29 @@
+spring:
+  application:
+    title: ODEVELOPERS SERVICE ORIENTED
+    name: ODEVELOPERS SERVICE ORIENTED
+  datasource:
+    url: jdbc:h2:mem:sample;DB_CLOSE_DELAY=-1
+    username: sa
+    password: sa
+    hikari:
+      connection-timeout: 10000
+      idle-timeout: 120000
+      max-lifetime: 1200000
+      minimum-idle: 0
+      maximum-pool-size: 10
+      validation-timeout: 5000
+    initialization-mode: always
+    platform: h2
+  #    data: classpath:test-h2.sql
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+
+server:
+  port: 9090
