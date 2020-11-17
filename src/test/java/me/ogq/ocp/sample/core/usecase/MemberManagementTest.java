@@ -18,5 +18,8 @@ public class MemberManagementTest {
   @Test
   public void 멤버_일대다_테스트(){
     memberManagement.save();
+    memberManagement.findWith("test");
   }
+
+
 }
